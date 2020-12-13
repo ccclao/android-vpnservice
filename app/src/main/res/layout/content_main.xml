@@ -11,7 +11,7 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:onClick="clickSwitch"
+        android:id="@+id/btn_start"
         android:text="start"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,10 +24,9 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:onClick="clickStop"
+        android:id="@+id/btn_stop"
         android:text="stop"
         android:textSize="18sp"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.729"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -38,7 +37,7 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:onClick="clickHttp"
+        android:id="@+id/btn_http"
         android:text="http"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +51,7 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:onClick="clickDns"
+        android:id="@+id/btn_dns"
         android:text="dns"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

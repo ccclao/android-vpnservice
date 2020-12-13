@@ -3,6 +3,8 @@ package com.mocyx.basic_client;
 
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.net.ProxyInfo;
+import android.net.Uri;
 import android.net.VpnService;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
@@ -60,9 +62,12 @@ public class LocalVPNService extends VpnService {
     private void setupVPN() {
         try {
             if (vpnInterface == null) {
+                Uri uri = Uri.parse("http://120.24.61.225");
+                ProxyInfo proxyInfo = ProxyInfo.buildDirectProxy("http://120.24.61.225", 8888);
                 Builder builder = new Builder();
                 builder.addAddress(VPN_ADDRESS, 32);
                 builder.addRoute(VPN_ROUTE, 0);
+                builder.setHttpProxy(proxyInfo);
                 builder.addDnsServer(Config.dns);
                 if (Config.testLocal) {
                     builder.addAllowedApplication("com.mocyx.basic_client");
